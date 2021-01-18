@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+
+
+    <style>
+        .card{
+            width: 400px;
+            height: 400px;
+            background-color:#c5b9b9;
+            margin-bottom: 20px;
+            display: inline-block;
+            text-align: center;
+            padding: 0%;
+        }
+        
+#you{
+    
+ background-color: white;
+border: 1px solid black;
+
+}
+h3{
+    margin-bottom: 0px;
+}
+h4{
+    margin-top: 0px;
+}
+#container{
+    
+    margin: 10% 5%;
+    
+    text-align: center;
+    }
+#button-card{
+   text-align: center;
+    margin-top: 20px;
+background-color: rgb(253, 253, 253);
+}
+#button-card input{
+    font-size: 35px ;
+   color: white;
+
+}
+
+.box{
+    background-color: #c5b9b9;
+    border: solid;
+    width: 100%;
+    height: 200px;
+  margin: auto;
+  padding: 1%;
+}
+#q{
+
+    float: left;
+   margin-left: 20%;
+}
+#w{
+   
+text-align: center;
+  margin-right: 30% ;
+ 
+}
+
+ #a{
+    text-align: right;
+  float: right;
+  margin-top: -5%; 
+  margin-right: 20%;
+        }
+  </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Number Guesser</h1>
+    
+    <h2 style="text-align: center;">Round 1</h2>
+
+  <h3 style="text-align: center;">Target Number : 11</h3> 
+
+    <div id="container">
+        <div class="card" id="computer">
+        <h3>Computer</h3>
+        <h4>Score</h4>
+        <h1>7</h1>
+        </div>
+        <div class="card" id="you"> 
+        <h3>You</h3>
+        <h4>Score</h4>
+         <h1>9</h1>
+        </div>
+        <div id="button-card">
+            <input type="button" value="Next Round" style="background-color: blue;">
+    </div>
+    </div>
+    <div class="box">
+        <div id="q">
+          <h3>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    Step 1</h3>  
+          <p> Input a number between 0 and 9 </p>
+        </div>    
+        <div id="w">
+           <h3 >Step 2</h3> 
+           <p>Click Make aGuess to Submit your guess and <br>
+                  see who won the round</p>
+        </div>
+
+      <div id="a" >
+          <h3 > Step 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</h3>  
+          <p>Click Next Round to Play again</p> 
+       </div>
+      
+
+     </div>
+    
+</body>
+</html>
