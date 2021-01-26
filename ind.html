@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+  justify-content: center;
+  margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img height="100px" src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.google.com%2Fimages%2Fbranding%2Fgooglelogo%2F2x%2Fgooglelogo_color_160x56dp.png&imgrefurl=https%3A%2F%2Fwww.google.com%2F&tbnid=bmKHarofYZ4ziM&vet=12ahUKEwiOm-Xi2LfuAhU_jUsFHaB_Cn8QMygAegUIARDSAQ..i&docid=y14FcUQOGl6RfM&w=320&h=112&q=google&ved=2ahUKEwiOm-Xi2LfuAhU_jUsFHaB_Cn8QMygAegUIARDSAQ" alt=""/>
+          <h1 class="cou">1000</h1>
+          <p class="follow">followers</p>
+           </div> 
+          
+<script>
+
+           var cou=document.querySelector(".cou");
+var follow=document.querySelector(".follow");
+let count =1;
+setInterval(() => {
+    if (count < 500){
+        count++;
+        cou.innerText=count;
+    }
+},1);
+setTimeout(() =>{
+    follow.innerHTML="HOW ARE YOU"
+},2000)
+
+
+</script>
+</body>
+</html>
