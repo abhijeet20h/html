@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<html>
-<body id="a">
-
-<div id="test" name="d1">Pranay</div>
-<div name="d1">Abhijeet</div>
-<button onmouseover="myFunction()">Try it</button> <br> <br> <hr> <br>
-<button onmouseover="myFu()">CLICK ME</button> <br> <br> <hr> <br>
-  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 <script>
+     function generateRandomHexCode() {
+    let hexCode = "#" 
 
-function myFunction() {
+    while ( hexCode.length < 7 ) {
+      hexCode += (Math.round(Math.random() * 15)).toString(16) 
+    }
 
-    var x = document.getElementsByName("d1");
-    alert(x[0].innerHTML);
-    document.getElementById("a").style.backgroundColor = "yellow";
-}
-function myFu(){
-   document.body.style.backgroundColor="green";
-}
-
-
+    return hexCode 
+  }
 
 </script>
+
+   
 </body>
 </html>
