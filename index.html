@@ -1,96 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+     .controls{
+      margin-bottom: 50px;
+    }
+
+    input {
+      width: 100px;
+    }
+        body{
+                        text-align: center;
+                        background: #181a1b;
+                        color: white;
+                        font-family: 'helvetica neue', sans-serif;
+                        font-weight: 100;
+                        font-size: 50px;
+        }
+        
+
+    :root {
+      --base: #e9b90e;
+      --spacing: 10px;
+      --blur: 10px;
+    }
+
+    img {
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
+
+    .hl {
+      color: var(--base);
+    }
+    </style>
 </head>
-<style>
-    
-    .container{
-        margin: auto;
-  width: 500px;
-  height: 600px;
-  border: 3px solid green;
-  padding: 0px  0px;
-
-   }
- .m{
-     margin-top: 10%;
- }
-.top{
-    border: 2px solid black;
-    padding : 0px;
- margin: auto;
- background-color: black ;
- color: white;
- text-align: center;
-}
-
-.custom-select {
-  position: relative;
-  font-family: Arial;
-  
-}
-
-.custom-select select {
-  display: none; /*hide original SELECT element: */
-
-}
-h4{
-    padding: 10px 15px;
-}
-#z{
-    margin-left: 35%;
-    
-}
-#z button{
-    padding: 10px 35px;
-    font-size: 20px;
-    margin-top: 20px;
-}
-#y{
-    padding: 20px 25px;
-}
-#o{
-    align-items: center;
-    border: 1px solid black;
-    padding : 20px;
-}
-#k{
-    margin-bottom: 10px;
-}
-
-</style>
 <body>
-    <div class="m">
-        <div class="container">
-            <div class="top"> <h2>TIP CALCULATOR</h2></div>
-           <h4>How much was your bill </h4>
-           <label style="padding: 15px 15px;">$</label>
-           <input type="text" placeholder="Bill Amount">
-            <h4 id="k">How was your service</h4>
-            
-            <div id="o"  class="custom-select" style="width:200px;">
-                <select>
-                  <option value="0"></option>
-                  <option value="1"></option>
-                  <option value="2"></option>
-                  <option value="3"></option>
-                </select>
-              </div>
-    <h4 id="k">How many people are sharing the bill</h4>
-    <div id="y">
-        <input type="text" placeholder="Number of People" >
-    <label for="email"> <h5>people</h5></label>
-    </div>
-    
-<div id="z">
-    <button type="button" class="btn btn-danger">CALCULATE</button>
-</div>
    
+    <h2>Update CSS Variables with <span class='hl'>JS</span></h2>
 
-        </div>
+    <div class="controls">
+      <label for="spacing">Spacing:</label>
+      <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+  
+      <label for="blur">Blur:</label>
+      <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+  
+      <label for="base">Base Color</label>
+      <input id="base" type="color" name="base" value="#ffc600">
     </div>
-    
+  
+   
+<div class="c">
+    <img src="waterfall-1024x683.jpg" alt="">
+</div>
+<script>
+    const inputs = document.querySelectorAll('.controls input');
+
+    function handleUpdate() {
+      const suffix = this.dataset.sizing || '';
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+
+    inputs.forEach(input => input.addEventListener('change', handleUpdate));
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+  </script>
+
 </body>
 </html>
